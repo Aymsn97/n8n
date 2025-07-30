@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: n8n-akstudio
+    env: node
+    plan: free
+    branch: master
+    buildCommand: npm install && npm run build
+    startCommand: n8n start
+    envVars:
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: true
+      - key: N8N_BASIC_AUTH_USER
+        value: admin
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: Plolloeluna97
+      - key: N8N_PORT
+        value: 10000
+      - key: N8N_HOST
+        value: 0.0.0.0
+      - key: WEBHOOK_URL
+        value: https://n8n-akstudio.onrender.com/
